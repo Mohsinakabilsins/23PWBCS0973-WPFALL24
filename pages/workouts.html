@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routines Pagination</title>
+    <link rel="shortcut icon" href="../assets/images/weightlifter.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #1a1a1a;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 10vh;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo h1 span {
+            color: #e63946;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            list-style-type: none;
+        }
+
+        .nav-links a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 10px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e63946;
+            border-color: #e63946;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .workout-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .workout {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .workout.active {
+            display: block;
+        }
+
+        .workout img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .workout h2 {
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        .workout h3 {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #e63946;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #d33f49;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pagination button:hover {
+            background-color: #d33f49;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .logo h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0.9);
+                align-items: center;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 13px;
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Power<span>X</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./pages/workouts.html">Workouts</a></li>
+                <li><a href="./pages/nutrition.html">Nutrition</a></li>
+                <li><a href="./pages/photos.html">Photos</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Workout Routines</h1>
+        <div class="workout-container">
+            <div class="workout active">
+                <h2>Lower Body Blast</h2>
+                <img src="../assets/images/LowerBodyBlast.jpg" alt="Lower Body Blast Workout">
+                <p>A powerful workout for building strength in your legs.</p>
+                <h3>Details:</h3>
+                <p>Sets: 4 | Reps: 10-15</p>
+                <p>Exercises: Squats, Lunges, Deadlifts</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Upper Body Strength</h2>
+                <img src="../assets/images/UpperBodyStrength.jpg" alt="Upper Body Strength Workout">
+                <p>Focus on building muscle in your arms and chest.</p>
+                <h3>Details:</h3>
+                <p>Sets: 3 | Reps: 8-12</p>
+                <p>Exercises: Bench Press, Pull-Ups, Bicep Curls</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Core Conditioning</h2>
+                <img src="../assets/images/CoreConditioning.jpg" alt="Core Conditioning Workout">
+                <p>Strengthen your core with these effective exercises.</p>
+                <h3>Details:</h3>
+                <p>Sets: 4 | Reps: 15-20</p>
+                <p>Exercises: Planks, Russian Twists, Bicycle Crunches</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Cardio Burn</h2>
+                <img src="../assets/images/CardioBurn.jpg" alt="Cardio Burn Workout">
+                <p>Get your heart rate up with this intense cardio session.</p>
+                <h3>Details:</h3>
+                <p>Duration: 30 minutes</p>
+                <p>Exercises: Running, Jump Rope, Burpees</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Full Body HIIT</h2>
+                <img src="../assets/images/fullbodyhit.jpg" alt="Full Body HIIT Workout">
+                <p>High-Intensity Interval Training for all muscle groups.</p>
+                <h3>Details:</h3>
+                <p>Sets: 5 | Duration: 20 seconds work, 10 seconds rest</p>
+                <p>Exercises: Kettlebell Swings, Mountain Climbers, Squat Jumps</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Pilates Flow</h2>
+                <img src="../assets/images/PilatesFlow.jpg" alt="Pilates Flow Workout">
+                <p>Improve your flexibility and core strength with Pilates.</p>
+                <h3>Details:</h3>
+                <p>Duration: 45 minutes</p>
+                <p>Exercises: Roll-ups, Leg Circles, The Saw</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Yoga for Relaxation</h2>
+                <img src="../assets/images/yoga.jpg" alt="Yoga for Relaxation Workout">
+                <p>Relax and unwind with this gentle yoga routine.</p>
+                <h3>Details:</h3>
+                <p>Duration: 30 minutes</p>
+                <p>Exercises: Downward Dog, Child's Pose, Warrior II</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Strength Training Basics</h2>
+                <img src="../assets/images/StrengthTrainingBasics.jpg" alt="Strength Training Basics Workout">
+                <p>Learn the fundamentals of strength training.</p>
+                <h3>Details:</h3>
+                <p>Sets: 3 | Reps: 10-15</p>
+                <p>Exercises: Deadlifts, Push-Ups, Dumbbell Rows</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Bodyweight Workout</h2>
+                <img src="../assets/images/BodyweightWorkout.jpg" alt="Bodyweight Workout">
+                <p>A workout you can do anywhere, no equipment needed.</p>
+                <h3>Details:</h3>
+                <p>Sets: 4 | Reps: 15-20</p>
+                <p>Exercises: Push-Ups, Squats, Lunges</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="workout">
+                <h2>Agility Training</h2>
+                <img src="../assets/images/AgilityTraining.jpg" alt="Agility Training Workout">
+                <p>Enhance your speed and coordination with agility drills.</p>
+                <h3>Details:</h3>
+                <p>Sets: 4 | Duration: 30 seconds each</p>
+                <p>Exercises: Ladder Drills, Cone Drills, Shuttle Runs</p>
+                <button>Try it Now</button>
+            </div>
+
+            <div class="pagination">
+                <button id="prevButton">Previous</button>
+                <button id="nextButton">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
