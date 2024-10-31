@@ -7,11 +7,12 @@
 body {
   font-family: Arial, sans-serif;
   color: #fff;
-  background-color: #1a1a1a;
+  background-color: black;
 }
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 html {
@@ -23,9 +24,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 10vh;
+  padding: 10px 20px;
 }
 
 .logo h1 {
@@ -44,13 +43,10 @@ nav {
 }
 
 .nav-links li {
-  text-align: center;
   list-style-type: none;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 10px;
@@ -60,6 +56,7 @@ nav {
 
 .nav-links a:hover {
   color: #e63946;
+  border-color: #e63946;
 }
 
 /*////////////// hero section styling  ////////////////////*/
@@ -107,34 +104,27 @@ nav {
 
 @media (max-width: 768px) {
   nav {
+    background-color: black;
     flex-direction: column;
-    height: auto;
     align-items: center;
-    padding: 10px 0;
-  }
-
-  .logo h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    justify-content: center;
+    padding: 10px;
   }
 
   .nav-links {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
-    align-items: center;
-  }
-
-  .nav-links li {
-    width: 100%;
   }
 
   .nav-links a {
     font-size: 1.2rem;
-    padding: 13px;
-    display: block;
+    padding: 10px;
     text-align: center;
+    width: 100%;
+    text-decoration: none;
   }
 
   .hero {
@@ -244,6 +234,7 @@ main {
 
 /*////////////// footer section styling  ////////////////////*/
 footer {
+  background-color: #000000;
   color: #ffffff;
   padding: 40px 20px;
 }
