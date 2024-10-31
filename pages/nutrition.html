@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Guide</title>
+    <link rel="shortcut icon" href="../assets/images/BodyweightWorkout.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #1a1a1a;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo h1 span {
+            color: #e63946;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            list-style-type: none;
+        }
+
+        .nav-links a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 10px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e63946;
+            border-color: #e63946;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e63946;
+        }
+
+        .nutrition-guide {
+            margin-bottom: 40px;
+        }
+
+        .nutrition-guide h2 {
+            color: #e63946;
+            margin: 20px 0 10px;
+        }
+
+        .nutrition-guide p {
+            margin-bottom: 10px;
+        }
+
+        .nutrition-guide ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nutrition-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .tips-container,
+        .snack-container {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tips-container ul,
+        .snack-container ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: #e63946;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .logo h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0.9);
+                align-items: center;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 13px;
+                display: block;
+                text-align: center;
+            }
+
+            .hero {
+                background-position: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .hero-content p {
+                margin-bottom: 30px;
+                font-size: 1.5rem;
+            }
+
+            .hero-content button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Power<span>X</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./workouts.html">Workouts</a></li>
+                <li><a href="./nutrition.html">Nutrition</a></li>
+                <li><a href="./photos.html">Photos</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nutrition Guide</h1>
+
+        <section class="nutrition-guide">
+            <h2>Meal Planning</h2>
+            <p>Meal planning helps you maintain a balanced diet and make healthier choices. Here are some tips:</p>
+            <ul>
+                <li>Plan your meals for the week ahead.</li>
+                <li>Include a variety of food groups: proteins, carbohydrates, and fats.</li>
+                <li>Prepare meals in advance and store them in portion-sized containers.</li>
+                <li>Make a shopping list to avoid impulse buying.</li>
+            </ul>
+            <img src="../assets/images/dryfruit.jpg" alt="Meal Planning" class="nutrition-image">
+
+            <h2>Healthy Eating Habits</h2>
+            <p>Adopting healthy eating habits can lead to long-term wellness:</p>
+            <ul>
+                <li>Eat at regular intervals to keep your metabolism active.</li>
+                <li>Stay hydrated by drinking plenty of water.</li>
+                <li>Limit processed foods and sugar intake.</li>
+                <li>Practice mindful eating; pay attention to your hunger cues.</li>
+            </ul>
+            <img src="../assets/images/HealthyEatingHabits.jpg" alt="Healthy Eating Habits" class="nutrition-image">
+
+            <h2>Healthy Recipes</h2>
+            <p>Try these healthy recipes for nutritious meals:</p>
+            <ul>
+                <li><strong>Quinoa Salad:</strong> A refreshing mix of quinoa, cucumbers, tomatoes, and feta cheese.
+                </li>
+                <li><strong>Grilled Chicken:</strong> Marinated chicken breast grilled to perfection, served with
+                    steamed vegetables.</li>
+                <li><strong>Overnight Oats:</strong> Rolled oats soaked in almond milk, topped with fruits and nuts.
+                </li>
+                <li><strong>Veggie Stir-fry:</strong> A colorful mix of bell peppers, broccoli, and carrots stir-fried
+                    with tofu.</li>
+            </ul>
+            <img src="../assets/images/HealthyRecipes.jpg" alt="Healthy Recipes" class="nutrition-image">
+        </section>
+
+        <section class="tips-container">
+            <h2>Nutrition Tips</h2>
+            <p>Here are some additional tips to boost your nutrition:</p>
+            <ul>
+                <li>Incorporate more fruits and vegetables into your diet.</li>
+                <li>Choose whole grains over refined grains.</li>
+                <li>Include healthy fats, such as avocados and nuts.</li>
+                <li>Limit sodium intake by cooking at home.</li>
+            </ul>
+        </section>
+
+        <section class="snack-container">
+            <h2>Healthy Snack Ideas</h2>
+            <p>Snack smartly with these healthy options:</p>
+            <ul>
+                <li>Greek yogurt with honey and berries.</li>
+                <li>Hummus with carrot and cucumber sticks.</li>
+                <li>Apple slices with almond butter.</li>
+                <li>Homemade trail mix with nuts and dried fruits.</li>
+            </ul>
+            <img src="../assets/images/HealthySnack.jpg" alt="Healthy Snacks" class="nutrition-image">
+        </section>
+
+        <section class="icons">
+            <div class="icon">
+                <img src="../assets/images/StayHydrated.jpg" alt="Icon 1">
+                <p>Stay Hydrated</p>
+            </div>
+            <div class="icon">
+                <img src="../assets/images/EatColorfully.jpg" alt="Icon 2">
+                <p>Eat Colorfully</p>
+            </div>
+            <div class="icon">
+                <img src="../assets/images/ChooseWholeFoods.jpg" alt="Icon 3">
+                <p>Choose Whole Foods</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
